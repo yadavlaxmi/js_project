@@ -21,8 +21,17 @@
         document.getElementById("convert").addEventListener("submit", function(event){
             event.preventDefault();
             var distance = document.getElementById("distance").value;
-            alert(distance);
+            distance = parseFloat(distance); 
+            var kilometers = distance * 1.60934; 
+            displayResult(kilometers); 
         });
+
+        function displayResult(kilometers) {
+            var answerElement = document.getElementById("answer");
+            var answerText = kilometers.toFixed(2) + " kilometers"; 
+            answerElement.innerHTML = "<h2>" + answerText + "</h2>"; 
+            answerElement.classList.remove("invisible"); 
+        }
     </script>
 </body>
 </html>

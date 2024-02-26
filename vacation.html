@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>vaction destination wishlist</title>
+    </head>
+    
+    <link rel="stylesheet" href="vacation.css"/>
+    <body>
+        <header>
+            <h1> Vacation destination wish list</h1>
+            <p>Found exciting places to visition on your next vacation? use the form below to
+                add them to your wishlist
+            </p>
+        </header>
+        <main>
+            <form id="destination_details_form">
+                <!-- <button type="submit">Add to list</button> -->
+                <label for ="name">Destination Name</label>
+                <input type="text" id="name" required></input>
+                <label for ="location">destination location</label>
+                <input type="text" id="location" required>
+                <label for ="photo">Photo</label>
+                <input type="url" id="photo" placeholder="provide a Url for a photo">
+                
+                <Label for ="description">Destination description</Label>
+                <textarea id ="description" placeholder="describe the destination"></textarea>
+                <button type="submit">Add to list</button>
+            </form>
+            <article>
+                <h2 id="title">Enter the destination Details</h2>
+                <div id ="destinations_container"></div>
+            </article>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
