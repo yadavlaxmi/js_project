@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title> Miles to Kilometers Converter </title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <h1>
+        Miles to Kilometers Convert
+    </h1>
+    <div class="container top">
+        <p>Type in a number of miles and click the button to convert the distance to kilometers</p>
+        <form method="post" action="sdnephpfile.php" id="convert">
+            <input type="text" name="distance" id="distance" placeholder="Distance">
+            <input type="submit" name="convertdist" value="Convert Distance">
+        </form>
+    </div>
+    <div class="container bottom" id="answer">
+        <h2 class="invisible">Answer goes here</h2>
+    </div>
+    <script>
+        document.getElementById("convert").addEventListener("submit", function(event){
+            event.preventDefault();
+            var distance = document.getElementById("distance").value;
+            alert(distance);
+        });
+    </script>
+</body>
+</html>
